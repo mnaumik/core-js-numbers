@@ -33,8 +33,8 @@ function getRectangleArea(width, height) {
  *   3.14 => 19.729201864543903
  *   0    => 0
  */
-function getCircleCircumference(/* radius */) {
-  throw new Error('Not implemented');
+function getCircleCircumference(radius) {
+  return 2 * Math.PI * radius;
 }
 
 /**
@@ -49,10 +49,13 @@ function getCircleCircumference(/* radius */) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function getAverage(value1, value2) {
+  const sum = value1 + value2;
+  if (sum / 2 === Infinity) {
+    return Number.MAX_VALUE;
+  }
+  return sum / 2;
 }
-
 /**
  * Returns a distance between two points by cartesian coordinates.
  *
